@@ -1,6 +1,3 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import '../../teethy_exporter.dart';
 
 class CommunityAuth extends StatelessWidget {
