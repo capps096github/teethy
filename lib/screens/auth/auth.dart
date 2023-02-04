@@ -6,7 +6,7 @@ class CommunityAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: boxWhite,
+      backgroundColor: teethyWhite,
       body: Column(
         children: [
           Expanded(
@@ -18,16 +18,14 @@ class CommunityAuth extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: const BoxDecoration(
-                color: boxColor,
+                color: teethyColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(spacing40),
                   topRight: Radius.circular(spacing40),
                 ),
               ),
               child: Column(
-                children: [
-                  
-                ],
+                children: const [],
               ),
             ),
           ),

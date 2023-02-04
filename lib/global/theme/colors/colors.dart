@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 
 // box Color
-const boxColor = Color(0xFFA81124);
+const teethyColor = Color(0xFF004AAD);
 
 // box white
-const boxWhite = Color(0xFFFFFFFF);
+const teethyWhite = Color(0xFFFFFFFF);
 
 // box background
 const boxBackground = Color(0xFFE5E5E5);

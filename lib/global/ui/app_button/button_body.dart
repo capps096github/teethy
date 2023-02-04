@@ -36,7 +36,7 @@ class ButtonBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final buttonTextStyle = Theme.of(context)
         .textTheme
-        .button!
+        .labelLarge!
         .copyWith(fontWeight: FontWeight.w900);
 
     VisualDensity density = Theme.of(context).visualDensity;
