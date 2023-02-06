@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 ///A fully Responsive Widget that we use for rendering Items on the screen
-class BoxResponsive extends StatelessWidget {
+class TeethyResponsive extends StatelessWidget {
   // Mobile
   final Widget? smallMobile;
   final Widget? mediumMobile;
@@ -17,7 +17,7 @@ class BoxResponsive extends StatelessWidget {
   final Widget desktop;
 
   /// This is for App Wide Responsiveness
-  const BoxResponsive({
+  const TeethyResponsive({
     Key? key,
     this.smallMobile,
     this.mediumMobile,
