@@ -1,37 +1,14 @@
 import '../teethy_exporter.dart';
 
-class Teethy extends ConsumerWidget {
-  const Teethy({super.key});
+class Teethy extends StatelessWidget {
+  const Teethy({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final theme = ref.watch(themeProvider);
-    // final themeMode = ref.watch(themeModeProvider);
-    // final goRouter = ref.watch(routerProvider);
-
-    // return MaterialApp.router(
-    return MaterialApp(
+  Widget build(BuildContext context) {
+    //
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: teethyColor,
-      title: "Teethy App",
-      restorationScopeId: teethyId,
-
-      // *theme
-      // themeMode: themeMode,
-      theme: theme,
-      // Enable this later on in the Future when we add dark mode support
-      // darkTheme: theme.darkTheme,
-
-      // *router
-      // routerDelegate: goRouter.routerDelegate,
-      // routeInformationParser: goRouter.routeInformationParser,
-      // routeInformationProvider: goRouter.routeInformationProvider,
-      //* -- Scroll Behavior --
-      scrollBehavior: const MaterialScrollBehavior().copyWith(
-        physics: const BouncingScrollPhysics(),
-        scrollbars: false,
-      ),
-      home: const TeethyHome(),
+      home: Scaffold(),
     );
   }
 }
