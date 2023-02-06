@@ -1,30 +1,12 @@
-// import 'teethy_exporter.dart';
-//
-// void main() {
-//   WidgetsFlutterBinding.ensureInitialized();
-//
-//   //
-//   runApp(
-//     const ProviderScope(
-//       child: Teethy(),
-//     ),
-//   );
-// }
-import 'package:flutter/material.dart';
-import 'screens/home/consult.dart';
+import 'teethy_exporter.dart';
 
 void main() {
-  runApp(MyApp());
-}
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Consult(),
-    );
-  }
+  //
+  runApp(
+    const ProviderScope(
+      child: Teethy(),
+    ),
+  );
 }

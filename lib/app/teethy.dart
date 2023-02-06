@@ -8,9 +8,7 @@ class Teethy extends StatelessWidget {
     //
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: teethyColor,
-      ),
+      home: Scaffold(),
     );
   }
 }
