@@ -31,7 +31,7 @@ class Teethy extends ConsumerWidget {
         physics: const BouncingScrollPhysics(),
         scrollbars: false,
       ),
-      home: const TeethyShop(),
+      home: const TeethyHome(),
     );
   }
 }
