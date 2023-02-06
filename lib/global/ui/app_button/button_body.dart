@@ -42,9 +42,9 @@ class ButtonBody extends StatelessWidget {
     VisualDensity density = Theme.of(context).visualDensity;
 
     // if we are on mobile
-    final isMobile = TeethyResponsive.isMobile(context) ||
-        TeethyResponsive.isSmallMobile(context) ||
-        TeethyResponsive.isMediumMobile(context);
+    final isMobile = BoxResponsive.isMobile(context) ||
+        BoxResponsive.isSmallMobile(context) ||
+        BoxResponsive.isMediumMobile(context);
 
     // screen width
     final width = MediaQuery.of(context).size.width;
