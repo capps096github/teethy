@@ -11,9 +11,9 @@ class ButtonText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // is mobile
-    final isMobile = BoxResponsive.isMobile(context) ||
-        BoxResponsive.isSmallMobile(context) ||
-        BoxResponsive.isMediumMobile(context);
+    final isMobile = TeethyResponsive.isMobile(context) ||
+        TeethyResponsive.isSmallMobile(context) ||
+        TeethyResponsive.isMediumMobile(context);
 
     return Padding(
       padding: const EdgeInsets.all(12),
