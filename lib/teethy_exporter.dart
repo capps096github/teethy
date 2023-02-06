@@ -13,6 +13,14 @@ export 'package:flutter_riverpod/flutter_riverpod.dart';
 // url_launcher_web: ^2.0.12
 export 'package:url_launcher/url_launcher.dart';
 
+// google fonts
+export 'package:google_fonts/google_fonts.dart';
+
+// flextras
+export 'package:flextras/flextras.dart';
+
+export 'package:animations/animations.dart';
+
 // geolocator: ^9.0.1
 // export 'package:geolocator/geolocator.dart';
 // location: ^4.4.0
@@ -40,7 +48,10 @@ export 'routes/exporter.dart';
 export 'screens/exporter.dart';
 
 // * constants
-export 'constants/exporter.dart';
+export 'global/constants/exporter.dart';
 
 // *responsivenes
 export 'teethy_responsive.dart';
+
+// *data
+export 'data/exporter.dart';
