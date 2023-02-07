@@ -27,7 +27,7 @@ class ConsultDetail extends StatelessWidget {
           vertical: spacing8,
         ),
         maxCrossAxisExtent: isMobile ? 600 : 400,
-        childAspectRatio: isMobile ? (1 / 0.5) : (1 / 0.8),
+        childAspectRatio: isMobile ? (1 / 0.8) : (1 / 0.8),
         children: List.generate(
           shopItems.length,
           (index) {

@@ -74,6 +74,11 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = TeethyResponsive.isMobile(context) ||
+        TeethyResponsive.isSmallMobile(context) ||
+        TeethyResponsive.isMediumMobile(context);
+
+    //
     return Padding(
       padding: padding8,
       child: OpenRoute(
@@ -86,12 +91,14 @@ class SectionTitle extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // title
-                Text(
-                  title,
-                  style: const TextStyle(
-                    color: teethyBlack,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25,
+                Flexible(
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      color: teethyBlack,
+                      fontWeight: FontWeight.bold,
+                      fontSize: isMobile ? 20 : 25,
+                    ),
                   ),
                 ),
                 //

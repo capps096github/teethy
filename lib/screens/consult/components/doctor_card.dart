@@ -16,6 +16,11 @@ class DoctorCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = TeethyResponsive.isMobile(context) ||
+        TeethyResponsive.isSmallMobile(context) ||
+        TeethyResponsive.isMediumMobile(context);
+
+    //
     return Container(
       padding: padding8,
       margin: margin8,
@@ -23,7 +28,7 @@ class DoctorCard extends StatelessWidget {
         color: teethyWhite,
         borderRadius: borderRadius8,
       ),
-      height: 150,
+      height: (isDetail & isMobile) ? 300 : 150,
       width: isDetail ? 200 : 300,
       child: ExpandedScrollingColumn(
         children: [
