@@ -8,7 +8,7 @@ final List<HomePage> homePages = [
     selectedIcon: CupertinoIcons.house_fill,
     unselectedIcon: CupertinoIcons.house,
     label: "Home",
-    screen: const Placeholder(),
+    screen: const TeethyDoctors(),
   ),
   HomePage(
     selectedIcon: CupertinoIcons.cart_fill,

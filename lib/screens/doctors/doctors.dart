@@ -1,7 +1,7 @@
 import '../../teethy_exporter.dart';
 
-class CommunityAuth extends StatelessWidget {
-  const CommunityAuth({super.key});
+class TeethyDoctors extends StatelessWidget {
+  const TeethyDoctors({super.key});
 
   @override
   Widget build(BuildContext context) {
