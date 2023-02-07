@@ -3,9 +3,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../../../teethy_exporter.dart';
 
 class ClinicCard extends StatelessWidget {
-  const ClinicCard({super.key, required this.clinic});
+  const ClinicCard({
+    super.key,
+    required this.clinic,
+    this.isDetail = false,
+  });
 
   final Clinic clinic;
+
+  // is detail
+  final bool isDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +24,7 @@ class ClinicCard extends StatelessWidget {
     double width = 250;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: spacing8),
       child: InkWell(
         customBorder: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
@@ -33,14 +40,16 @@ class ClinicCard extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             children: [
               //
-              ClipRRect(
-                borderRadius: BorderRadius.circular(spacing8),
-                clipBehavior: Clip.antiAlias,
-                child: CachedNetworkImage(
-                  width: width,
-                  height: height,
-                  imageUrl: clinic.clinicPhoto,
-                  fit: BoxFit.fill,
+              Positioned.fill(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(spacing8),
+                  clipBehavior: Clip.antiAlias,
+                  child: CachedNetworkImage(
+                    width: width,
+                    height: height,
+                    imageUrl: clinic.clinicPhoto,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
 
@@ -58,7 +67,6 @@ class ClinicCard extends StatelessWidget {
                       teethyTransparent,
                       backColor.withOpacity(.4),
                       backColor.withOpacity(.8),
-                      backColor,
                       backColor,
                     ],
                   ),

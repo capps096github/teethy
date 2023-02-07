@@ -5,9 +5,9 @@ import 'home_page.dart';
 
 final List<HomePage> homePages = [
   HomePage(
-    selectedIcon: CupertinoIcons.house_fill,
-    unselectedIcon: CupertinoIcons.house,
-    label: "Home",
+    selectedIcon: CupertinoIcons.chat_bubble_2_fill,
+    unselectedIcon: CupertinoIcons.chat_bubble_2,
+    label: "Consultations",
     screen: const TeethyConsultancy(),
   ),
   HomePage(

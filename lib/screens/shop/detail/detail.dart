@@ -23,14 +23,8 @@ class ShopDetail extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          // title
-
           const VerticalSpacing(of: spacing4),
           TitleDescription(shopItem: shopItem),
-          // description
-
-          // price
-          // button
         ],
       ),
       bottomNavigationBar: Container(

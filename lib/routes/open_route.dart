@@ -10,7 +10,7 @@ class OpenRoute extends StatelessWidget {
     required this.closedBuilder,
     this.openColor = teethyColor,
     this.closedColor = teethyTransparent,
-    required this.routePath,
+    this.routePath = "",
     this.closedBorderRadius,
     this.closedShape,
   }) : super(key: key);

@@ -1,6 +1,7 @@
 import '../../teethy_exporter.dart';
 import 'components/clinic_card.dart';
 import 'components/doctor_card.dart';
+import 'consult_details.dart';
 
 class TeethyConsultancy extends StatelessWidget {
   const TeethyConsultancy({super.key});
@@ -10,15 +11,9 @@ class TeethyConsultancy extends StatelessWidget {
     return ListView(
       children: [
         //for you
-        const Padding(
-          padding: padding8,
-          child: Text(
-            'Doctors available',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-            ),
-          ),
+        const SectionTitle(
+          title: 'Doctors available',
+          to: ConsultDetail(),
         ),
 
         //jobs for you
@@ -40,16 +35,10 @@ class TeethyConsultancy extends StatelessWidget {
         //sized box
         const VerticalSpacing(of: spacing8),
 
-        //recently added jobs
-        const Padding(
-          padding: padding8,
-          child: Text(
-            'Clinics present',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-            ),
-          ),
+        //
+        const SectionTitle(
+          title: 'Clinics present',
+          to: ConsultDetail(isClinic: true),
         ),
 
         SizedBox(
@@ -67,6 +56,60 @@ class TeethyConsultancy extends StatelessWidget {
 
         const VerticalSpacing(of: spacing32),
       ],
+    );
+  }
+}
+
+class SectionTitle extends StatelessWidget {
+  const SectionTitle({
+    super.key,
+    required this.title,
+    required this.to,
+  });
+
+  final String title;
+
+  // to
+  final Widget to;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: padding8,
+      child: OpenRoute(
+        to: to,
+        closedBuilder: (context, action) => InkWell(
+          onTap: action,
+          child: Padding(
+            padding: padding8,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // title
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: teethyBlack,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+                //
+                const HorizontalSpacing(of: spacing4),
+
+                //
+                const Text(
+                  'See all',
+                  style: TextStyle(
+                    color: teethyBlack,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

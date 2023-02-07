@@ -5,9 +5,13 @@ import '../../../teethy_exporter.dart';
 class DoctorCard extends StatelessWidget {
   final Doctor doctor;
 
+  // is detail
+  final bool isDetail;
+
   const DoctorCard({
     super.key,
     required this.doctor,
+    this.isDetail = false,
   });
 
   @override
@@ -20,7 +24,7 @@ class DoctorCard extends StatelessWidget {
         borderRadius: borderRadius8,
       ),
       height: 150,
-      width: 300,
+      width: isDetail ? 200 : 300,
       child: ExpandedScrollingColumn(
         children: [
           Row(
@@ -54,8 +58,8 @@ class DoctorCard extends StatelessWidget {
           ),
           const VerticalSpacing(of: spacing8),
           Text(
-            doctor.doctorDescription,
-            maxLines: 3,
+            doctor.doctorDescription * 5,
+            maxLines: isDetail ? 10 : 3,
             style: const TextStyle(
               fontWeight: FontWeight.normal,
               fontSize: 15,
