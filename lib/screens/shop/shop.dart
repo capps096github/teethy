@@ -14,18 +14,17 @@ class TeethyShop extends StatelessWidget {
 
 //
     return Scaffold(
-      body: Padding(
-        padding: padding8,
-        child: GridView.extent(
-          maxCrossAxisExtent: isMobile ? 600 : 400,
-          childAspectRatio: 1 / 1.1,
-          children: List.generate(
-            shopItems.length,
-            (index) => ShopCard(
-              shopItem: shopItems[index],
-            ),
-          ).toList(),
+      body: GridView.extent(
+        padding: const EdgeInsets.symmetric(
+          horizontal: spacing8,
+          vertical: spacing8,
         ),
+        maxCrossAxisExtent: isMobile ? 600 : 400,
+        childAspectRatio: 1 / 1.1,
+        children: List.generate(
+          shopItems.length,
+          (index) => ShopCard(shopItem: shopItems[index]),
+        ).toList(),
       ),
     );
   }
