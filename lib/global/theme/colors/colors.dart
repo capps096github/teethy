@@ -10,6 +10,8 @@ const Color teethyTextColor = Color(0xFF091C40);
 // teethyt transparent
 const teethyTransparent = Colors.transparent;
 
+// teethy black
+const teethyBlack = Colors.black;
 
 // teethy white
 const teethyWhite = Color(0xFFFFFFFF);
