@@ -31,17 +31,21 @@ class ShopCardContent extends StatelessWidget {
       child: ExpandedScrollingColumn(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Hero(
-            tag: shopItem.name,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(spacing8),
-                topLeft: Radius.circular(spacing8),
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: CachedNetworkImage(
-                imageUrl: shopItem.imageUrl,
-                fit: BoxFit.fill,
+          SizedBox(
+            height: 200,
+            child: Hero(
+              tag: shopItem.name,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(spacing8),
+                  topLeft: Radius.circular(spacing8),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: CachedNetworkImage(
+                  imageUrl: shopItem.imageUrl,
+                  fit: BoxFit.fill,
+                  width: double.infinity,
+                ),
               ),
             ),
           ),

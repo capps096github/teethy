@@ -24,6 +24,7 @@ class TipsTile extends StatelessWidget {
               child: CachedNetworkImage(
                 imageUrl: teethyTip.imageUrl,
                 fit: BoxFit.fill,
+                width: double.infinity,
               ),
             ),
           ),

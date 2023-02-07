@@ -10,6 +10,9 @@ const Color teethyTextColor = Color(0xFF091C40);
 // teethyt transparent
 const teethyTransparent = Colors.transparent;
 
+// teethy green
+const teethyGreen = Color(0xFF00C853);
+
 // teethy black
 const teethyBlack = Colors.black;
 
@@ -21,6 +24,6 @@ const teethyBackground = Color(0xFFE9F2FA);
 
 const teethySerenity = Color(0xFFB3CEE5);
 
-// const Color adminRed = Color(0xFFD50000);
+const Color teethyRed = Color(0xFFD50000);
 
 // const Color adminCharcoalGrey900 = Color(0xFF263238);

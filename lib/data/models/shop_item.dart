@@ -5,7 +5,7 @@ class ShopItem {
   final String name;
   final String description;
   final String imageUrl;
-  final double price;
+  final int price;
   // final int quantity;
 
   ShopItem({
