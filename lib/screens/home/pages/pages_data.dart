@@ -5,8 +5,8 @@ import 'home_page.dart';
 
 final List<HomePage> homePages = [
   HomePage(
-    selectedIcon: Icons.home,
-    unselectedIcon: Icons.home_outlined,
+    selectedIcon: CupertinoIcons.house_fill,
+    unselectedIcon: CupertinoIcons.house,
     label: "Home",
     screen: const Placeholder(),
   ),
@@ -20,6 +20,6 @@ final List<HomePage> homePages = [
     selectedIcon: CupertinoIcons.doc_on_clipboard_fill,
     unselectedIcon: CupertinoIcons.doc_on_clipboard,
     label: "Tips",
-    screen: const Placeholder(),
+    screen: const TeethyTips(),
   ),
 ];

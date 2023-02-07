@@ -24,15 +24,12 @@ class OpenRoute extends StatelessWidget {
   // border radius for the closed container
   final BorderRadius? closedBorderRadius;
 
- final ShapeBorder? closedShape;
+  final ShapeBorder? closedShape;
 
-///The builder for the closed container
+  ///The builder for the closed container
   final CloseContainerBuilder closedBuilder;
   @override
   Widget build(BuildContext context) {
-    // TODO add ability to update url here
-    //  i guess this can be done by adding the navigator method on the on tap of the open container, try it out and see
-    //
     return OpenContainer(
       openBuilder: (context, _) => to,
       openColor: openColor,
@@ -41,10 +38,11 @@ class OpenRoute extends StatelessWidget {
       closedColor: closedColor,
       clipBehavior: Clip.antiAlias,
       closedElevation: 0,
-      closedShape:closedShape?? RoundedRectangleBorder(
-        borderRadius: closedBorderRadius ??
-            const BorderRadius.all(Radius.circular(spacing8)),
-      ),
+      closedShape: closedShape ??
+          RoundedRectangleBorder(
+            borderRadius: closedBorderRadius ??
+                const BorderRadius.all(Radius.circular(spacing8)),
+          ),
       closedBuilder: closedBuilder,
       routeSettings: RouteSettings(name: routePath),
     );

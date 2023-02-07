@@ -1,0 +1,1 @@
+export 'teeethy_tips.dart';

@@ -13,7 +13,7 @@ class ShopDetail extends StatelessWidget {
         title: Text(shopItem.name),
         leading: const BackButton(),
       ),
-      body: Column(
+      body: ListView(
         children: [
           //image
           Hero(
